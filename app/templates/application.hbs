@@ -1,6 +1,16 @@
-<header class="jumbotron" style="text-align: center;">
-  <h1>Dog Blog</h1>
-  {{#link-to "about"}}About{{/link-to}} | {{#link-to "index"}}Home{{/link-to}} | {{#link-to "contact"}}Contact Us{{/link-to}}
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav navbar-right">
+      <li>{{#link-to "index"}}Home{{/link-to}}</li>
+      <li>{{#link-to "about"}}About{{/link-to}}</li>
+      <li>{{#link-to "contact"}}Contact Us{{/link-to}}</li>
+    </ul>
+  </div>
+</nav>
+<header class="jumbotron">
+  <div class="container" id="jumbotron-text">
+    <h1>The Lab Report</h1>
+  </div>
 </header>
 <div class="container">
   {{outlet}}

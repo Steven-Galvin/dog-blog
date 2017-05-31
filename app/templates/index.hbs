@@ -1,16 +1,22 @@
-<h2> Welcome to the Dog Blog </h2>
 
-We hope lorem ipsum kitty puppy.
+<div class="row">
+  <div class="col-md-8">
+    <h2> Welcome to a dog all about blogs! </h2>
 
-{{new-post savePost="savePost"}}
+    We hope lorem ipsum kitty puppy.
+    <hr>
+    {{#each model as |post|}}
+      <h4>{{post.title}}</h4>
+      <p>{{post.date}}</p>
+      <img src={{post.image}}/>
+      <p>{{post.body}}</p>
 
-{{#each model as |post|}}
-  <h4>{{post.title}}</h4>
-  <p>{{post.date}}</p>
-  <img src={{post.image}}/>
-  <p>{{post.body}}</p>
-
-  {{update-post post=post updatePost = "updatePost"}}
-  <button class = "btn btn-default" {{action 'deletePost' post}}>Delete Post</button>
-  <hr>
-{{/each}}
+      {{update-post post=post updatePost = "updatePost"}}
+      <button class = "btn btn-default" {{action 'deletePost' post}}>Delete Post</button>
+      <hr>
+    {{/each}}
+  </div>
+  <div class="col-md-4" id="newPost">
+    {{new-post savePost="savePost"}}
+  </div>
+</div>

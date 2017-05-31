@@ -1,0 +1,20 @@
+.jumbotron {
+  min-height: 600px;
+  background-position: center;
+  background-color: #b2a595;
+  background-image: url("/images/header.png");
+  background-repeat: no-repeat;
+}
+
+#jumbotron-text {
+  padding: 120px 0 0 120px;
+  color: white;
+  text-shadow: 1px 1px 5px black;
+}
+
+#newPost {
+  
+  padding-bottom: 15px;
+  border-left: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+}
