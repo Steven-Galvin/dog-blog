@@ -10,6 +10,7 @@ We hope lorem ipsum kitty puppy.
   <img src={{post.image}}/>
   <p>{{post.body}}</p>
 
+  {{update-post post=post updatePost = "updatePost"}}
   <button class = "btn btn-default" {{action 'deletePost' post}}>Delete Post</button>
   <hr>
 {{/each}}
