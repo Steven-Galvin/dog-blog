@@ -9,5 +9,7 @@ We hope lorem ipsum kitty puppy.
   <p>{{post.date}}</p>
   <img src={{post.image}}/>
   <p>{{post.body}}</p>
+
+  <button class = "btn btn-default" {{action 'deletePost' post}}>Delete Post</button>
   <hr>
 {{/each}}
