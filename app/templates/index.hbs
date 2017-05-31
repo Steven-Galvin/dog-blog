@@ -1,0 +1,13 @@
+<h2> Welcome to the Dog Blog </h2>
+
+We hope lorem ipsum kitty puppy.
+
+{{new-post savePost="savePost"}}
+
+{{#each model as |post|}}
+  <h4>{{post.title}}</h4>
+  <p>{{post.date}}</p>
+  <img src={{post.image}}/>
+  <p>{{post.body}}</p>
+  <hr>
+{{/each}}
