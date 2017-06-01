@@ -24,6 +24,11 @@ export default Ember.Route.extend({
         return post.save();
       });
       this.transitionTo('post', post);
+    },
+
+    updateComment(comment) {
+      comment.save();
+      this.transitionTo('post', post);
     }
   }
 });

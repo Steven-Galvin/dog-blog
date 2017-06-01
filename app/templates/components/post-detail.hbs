@@ -12,6 +12,8 @@
 <h4>Comments</h4>
 <ul>
   {{#each post.comments as |comment|}}
-    <li><p>{{comment.content}}</p> <h5> - by {{comment.author}} on {{comment.date}}</h5></li>
+    <li><p>{{comment.content}}</p> <h5> - by {{comment.author}} on {{comment.date}}</h5>
+
+    {{update-comment comment=comment updateComment="updateComment"}}</li>
   {{/each}}
 </ul>

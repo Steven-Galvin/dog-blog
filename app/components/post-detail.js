@@ -19,6 +19,15 @@ export default Ember.Component.extend({
 
     saveComment(params) {
       this.sendAction('saveComment', params)
-    }
+    },
+
+    updateComment(comment, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!== undefined) {
+          comment.set(key,params[key]);
+        }
+      });
+      this.sendAction('updateComment', comment)
+    },
   }
 });
