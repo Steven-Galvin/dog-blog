@@ -3,4 +3,15 @@
 <img src={{post.image}}/>
 <p>{{post.body}}</p>
 
+{{update-post post=post updatePost = "updatePost"}}
+
 <button class = "btn btn-default" {{action 'deletePost' post}}>Delete Post</button>
+<hr>
+{{new-comment saveComment="saveComment" post=post}}
+
+<h4>Comments</h4>
+<ul>
+  {{#each post.comments as |comment|}}
+    <li><p>{{comment.content}}</p> <h5> - by {{comment.author}} on {{comment.date}}</h5></li>
+  {{/each}}
+</ul>
