@@ -29,5 +29,11 @@ export default Ember.Component.extend({
       });
       this.sendAction('updateComment', comment)
     },
+
+    deleteComment(comment) {
+      if (confirm('Are you sure you want to delete this comment?')) {
+        this.sendAction('destroyComment', comment);
+      }
+    }
   }
 });

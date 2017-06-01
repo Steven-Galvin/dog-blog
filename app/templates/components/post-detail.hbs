@@ -15,5 +15,7 @@
     <li><p>{{comment.content}}</p> <h5> - by {{comment.author}} on {{comment.date}}</h5>
 
     {{update-comment comment=comment updateComment="updateComment"}}</li>
+
+    <button class = "btn btn-default" {{action 'deleteComment' comment}}>Delete Comment</button>
   {{/each}}
 </ul>
