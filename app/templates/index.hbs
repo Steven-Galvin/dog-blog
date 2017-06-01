@@ -5,14 +5,13 @@
 
     We hope lorem ipsum kitty puppy.
     <hr>
-    {{#each model as |post|}}
-      <h4>{{post.title}}</h4>
+    {{#each model.posts as |post|}}
+      {{#link-to 'post' post.id}}<h4>{{post.title}}</h4>{{/link-to}}
       <p>{{post.date}}</p>
       <img src={{post.image}}/>
       <p>{{post.body}}</p>
 
       {{update-post post=post updatePost = "updatePost"}}
-      <button class = "btn btn-default" {{action 'deletePost' post}}>Delete Post</button>
       <hr>
     {{/each}}
   </div>

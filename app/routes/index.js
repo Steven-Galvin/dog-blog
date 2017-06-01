@@ -2,7 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll('post');
+    return Ember.RSVP.hash({
+      posts: this.store.findAll('post'),
+      comments: this.store.findAll('comment')
+    });
   },
 
   actions: {
@@ -22,11 +25,11 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
 
-    deletePost(post) {
-      if(confirm('Are you sure your want to delete this blog post?')) {
-        post.destroyRecord();
-        this.transitionTo('index');
-      }
-    }
+    // deletePost(post) {
+    //   if(confirm('Are you sure your want to delete this blog post?')) {
+    //     post.destroyRecord();
+    //     this.transitionTo('index');
+    //   }
+    // }
   }
 });
